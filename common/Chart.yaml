@@ -1,0 +1,13 @@
+apiVersion: v2
+name: common
+description: A Helm Chart Library of common helpers to write charts
+version: 1.0.0
+appVersion: 1.0.0
+type: library
+home: https://gildas.github.io/charts
+maintainers:
+  - name:  Gildas Cherruel
+    email: gildas@breizh.org
+keywords:
+  - template
+  - logging
