@@ -1,0 +1,6 @@
+# Artifact Hub repository metadata file
+#
+repositoryID: 150477ff-870d-4ba9-a253-e909974328a9
+owners: # (optional, used to claim repository ownership)
+  - name: Gildas Cherruel
+    email: gildas@breizh.org
