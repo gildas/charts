@@ -1,0 +1,11 @@
+#! /usr/bin/env bash
+
+[[ -d packages ]] || mkdir -p packages
+
+for folder in $(find . -type d); do
+  if [[ -f $folder/Chart.yaml ]]; then
+    echo ">>> Processing folder $folder"
+    helm package --destination packages/ $folder
+  fi
+done
+helm repo index --url https://gildas.github.io/charts .
