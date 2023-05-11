@@ -13,6 +13,7 @@ helm repo add gildas https://gildas.github.io/charts
 
 Here is the list of available charts:  
 - [common](./common/README.md), Common Templates used in my charts
+- [dynamodb-local](./dynamodb-local/README.md), Deploy AWS DynamoDB locally in your cluster
 
 ## License
 
