@@ -22,15 +22,15 @@ entries:
   dynamodb-local:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-05-11T12:05:03.774858561+09:00"
+    created: "2023-05-11T17:45:27.81888747+09:00"
     dependencies:
     - name: common
       repository: https://gildas.github.io/charts
       version: ~1.0.0
     description: a Helm Chart to deploy a local DynamoDB for development and testing
-    digest: 51f685f4e6f244354f5dbac4a36e7a0c104bb7e0892e411ba8879fd9d6719552
+    digest: d1771140ed989ecea5e07376ccb9b12d78d5e51a29022b3b5372e6e2537a2600
     home: https://www.breizh.org
-    icon: https://theme.zdassets.com/theme_assets/10737315/395a3f1687adf5bdfc3b44158f29212f45db9b3a.png
+    icon: https://cncf-branding.netlify.app/img/projects/helm/horizontal/color/helm-horizontal-color.png
     keywords:
     - database
     - dynamodb
@@ -39,4 +39,4 @@ entries:
     urls:
     - https://gildas.github.io/charts/packages/dynamodb-local-1.0.0.tgz
     version: 1.0.0
-generated: "2023-05-11T14:42:34.283492135+09:00"
+generated: "2023-05-11T17:45:27.817690364+09:00"
