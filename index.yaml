@@ -1,0 +1,21 @@
+apiVersion: v1
+entries:
+  common:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-05-11T11:43:05.872145406+09:00"
+    description: A Helm Chart Library of common helpers to write charts
+    digest: 04fa7157291d52cf36f4eb46a3ed7239ae76d8221486d479083bb8f68f8d870b
+    home: https://gildas.github.io/charts
+    keywords:
+    - template
+    - logging
+    maintainers:
+    - email: gildas@breizh.org
+      name: Gildas Cherruel
+    name: common
+    type: library
+    urls:
+    - https://gildas.github.io/charts/packages/common-1.0.0.tgz
+    version: 1.0.0
+generated: "2023-05-11T11:43:05.871729526+09:00"
