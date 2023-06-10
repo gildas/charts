@@ -1,8 +1,8 @@
 apiVersion: v2
 name: dynamodb-local
 description: a Helm Chart to deploy a local DynamoDB for development and testing
-version: 1.0.0
-appVersion: 1.0.0
+version: 1.0.1
+appVersion: 1.0.1
 icon: https://cncf-branding.netlify.app/img/projects/helm/horizontal/color/helm-horizontal-color.png
 home: https://www.breizh.org
 keywords:
