@@ -60,7 +60,21 @@ spec:
       tolerations:
         {{- toYaml . | nindent 8 }}
     {{- end }}
+  {{- if not .Values.persistence.enabled }}
       volumes:
         - name: storage
           emptyDir:
             sizeLimit: 10Gi
+  {{- else }}
+  volumeClaimTemplates:
+  - metadata:
+      name: storage
+    spec:
+      accessModes: {{ .Values.persistence.accessModes }}
+      {{- with .Values.persistence.storageClassName }}
+      storageClassName: {{ . }}
+      {{- end }}
+      resources:
+        requests:
+          storage: {{ .Values.persistence.size }}
+  {{- end }}
