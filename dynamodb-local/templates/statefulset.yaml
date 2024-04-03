@@ -44,6 +44,10 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
+            - name:      temp
+              mountPath: /tmp
+              subPath:   temp
+              readOnly:  false
             - name:      storage
               mountPath: /data
               subPath:   data
@@ -60,8 +64,11 @@ spec:
       tolerations:
         {{- toYaml . | nindent 8 }}
     {{- end }}
-  {{- if not .Values.persistence.enabled }}
       volumes:
+        - name: temp
+          emptyDir:
+            sizeLimit: 5Gi
+  {{- if not .Values.persistence.enabled }}
         - name: storage
           emptyDir:
             sizeLimit: 10Gi
