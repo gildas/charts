@@ -3,9 +3,9 @@ entries:
   common:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-05-11T14:42:34.283913657+09:00"
+    created: "2024-04-04T00:35:58.980834692+09:00"
     description: A Helm Chart Library of common helpers to write charts
-    digest: 3e00aa5d4d66bbc3661ad2f2c8c35e610c5b53328b6bfc9b2b0448bb65ca0d4f
+    digest: b952866fbf29ca642f87404769294514a019bcf557118cde5cd0d7a3e2afe767
     home: https://gildas.github.io/charts
     icon: https://cncf-branding.netlify.app/img/projects/helm/horizontal/color/helm-horizontal-color.png
     keywords:
@@ -21,8 +21,27 @@ entries:
     version: 1.0.0
   dynamodb-local:
   - apiVersion: v2
+    appVersion: 1.0.2
+    created: "2024-04-04T00:35:58.981736792+09:00"
+    dependencies:
+    - name: common
+      repository: https://gildas.github.io/charts
+      version: ~1.0.0
+    description: a Helm Chart to deploy a local DynamoDB for development and testing
+    digest: d3cc010c1f1c46cbd01ef216845254c8f72f2d6a66efb91ce28ea9fb2fe9e67a
+    home: https://www.breizh.org
+    icon: https://cncf-branding.netlify.app/img/projects/helm/horizontal/color/helm-horizontal-color.png
+    keywords:
+    - database
+    - dynamodb
+    - dynamodb-local
+    name: dynamodb-local
+    urls:
+    - https://gildas.github.io/charts/packages/dynamodb-local-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
     appVersion: 1.0.0
-    created: "2023-05-11T17:45:27.81888747+09:00"
+    created: "2024-04-04T00:35:58.981290679+09:00"
     dependencies:
     - name: common
       repository: https://gildas.github.io/charts
@@ -39,4 +58,4 @@ entries:
     urls:
     - https://gildas.github.io/charts/packages/dynamodb-local-1.0.0.tgz
     version: 1.0.0
-generated: "2023-05-11T17:45:27.817690364+09:00"
+generated: "2024-04-04T00:35:58.980523384+09:00"
