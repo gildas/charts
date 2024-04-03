@@ -44,6 +44,10 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
+            - name:      temp
+              mountPath: /tmp
+              subPath:   temp
+              readOnly:  false
             - name:      storage
               mountPath: /data
               subPath:   data
@@ -61,6 +65,23 @@ spec:
         {{- toYaml . | nindent 8 }}
     {{- end }}
       volumes:
+        - name: temp
+          emptyDir:
+            sizeLimit: 5Gi
+  {{- if not .Values.persistence.enabled }}
         - name: storage
           emptyDir:
             sizeLimit: 10Gi
+  {{- else }}
+  volumeClaimTemplates:
+  - metadata:
+      name: storage
+    spec:
+      accessModes: {{ .Values.persistence.accessModes }}
+      {{- with .Values.persistence.storageClassName }}
+      storageClassName: {{ . }}
+      {{- end }}
+      resources:
+        requests:
+          storage: {{ .Values.persistence.size }}
+  {{- end }}
